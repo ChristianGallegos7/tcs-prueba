@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="card">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="input-search"
+      [(ngModel)]="searchText"
+    />
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Nombre del producto</th>
+          <th>Descripción <span class="info-icon">i</span></th>
+          <th>Fecha de liberación <span class="info-icon">i</span></th>
+          <th>Fecha de reestructuración <span class="info-icon">i</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of visibleProducts; track $index) {
+        <tr>
+          <td class="image-logo-wrapper">
+            <img src="/images/card.webp" alt="Logo" class="image-logo" />
+          </td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.date_release | date : "dd/MM/yyyy" }}</td>
+          <td>{{ product.date_revision | date : "dd/MM/yyyy" }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <div>
+        {{ products.length }} Resultado{{ products.length !== 1 ? "s" : "" }}
+      </div>
+      <select class="dropdown" [(ngModel)]="itemsPageNumber">
+        <option [value]="5">5</option>
+        <option [value]="10">10</option>
+        <option [value]="20">20</option>
+      </select>
+    </div>
+  </div>
+</div>
