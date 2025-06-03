@@ -3,10 +3,11 @@ import { ProductInterface } from '../../interfaces/product.interface';
 import { DatePipe } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'product-list',
-  imports: [DatePipe, FormsModule],
+  imports: [DatePipe, FormsModule, RouterLink],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })

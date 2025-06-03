@@ -1,11 +1,14 @@
 <div class="wrapper">
   <div class="card">
-    <input
-      type="text"
-      placeholder="Search..."
-      class="input-search"
-      [(ngModel)]="searchText"
-    />
+    <div class="options">
+      <input
+        type="text"
+        placeholder="Search..."
+        class="input-search"
+        [(ngModel)]="searchText"
+      />
+      <button class="agregar-btn" routerLink="agregar">Agregar Producto</button>
+    </div>
 
     <table class="table">
       <thead>

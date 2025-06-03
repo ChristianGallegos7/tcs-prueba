@@ -1,3 +1,7 @@
+:root {
+  --amarillo: #ffdd00;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -93,4 +97,29 @@ body {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.agregar-btn {
+  padding: 10px 20px;
+  background-color: #ffdd00;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #0f265c;
+  font-weight: 600;
+}
+
+.agregar-btn:hover {
+  background-color: #ffd700;
 }
