@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'product-list',
-  imports: [DatePipe, FormsModule, RouterLink],
+  imports: [DatePipe, FormsModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
