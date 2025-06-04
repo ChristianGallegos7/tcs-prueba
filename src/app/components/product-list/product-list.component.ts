@@ -32,14 +32,15 @@ export class ProductList implements OnInit {
   }
 
   get visibleProducts(): ProductInterface[] {
-    const text = this.searchText.trim().toLowerCase();
+    const text = this.searchText.toLowerCase().trim();
 
     const filtered = this.products.filter(product =>
-      product.name.toLowerCase().includes(text) ||
-      product.description.toLowerCase().includes(text)
-    )
+      (product.name?.toLowerCase().includes(text) ?? false) ||
+      (product.description?.toLowerCase().includes(text) ?? false)
+    );
 
     return filtered.slice(0, this.itemsPageNumber);
   }
+
 
 }

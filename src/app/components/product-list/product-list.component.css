@@ -123,3 +123,40 @@ body {
 .agregar-btn:hover {
   background-color: #ffd700;
 }
+
+.info-icon {
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 16px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  margin-left: 5px;
+}
+
+.info-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.info-icon:hover::after {
+  opacity: 1;
+}

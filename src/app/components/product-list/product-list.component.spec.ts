@@ -56,4 +56,11 @@ describe('ProductList (simplificado)', () => {
     expect(result.length).toBe(1);
     expect(result[0].name).toBe('Black Card');
   });
+
+  it('no debe devolver resultados si no hay coincidencias', () => {
+    component.searchText = 'inexistente';
+    const result = component.visibleProducts;
+    expect(result).toEqual([]);
+  });
+
 });
